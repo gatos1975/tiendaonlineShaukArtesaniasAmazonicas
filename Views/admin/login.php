@@ -1,3 +1,4 @@
+ <!-- Start Banner Hero -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,13 +21,13 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">ADMINISTRACION</h3></div>
                                     <div class="card-body">
-                                        <form id="formulario" method="POST">
+                                        <form id="formulario">
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="email" type="email" name="email" value="wilmerayuy@gmail.com" placeholder="name@example.com"/>
                                                 <label for="email">Correo Electrónico</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="clave" type="password" name="clave" value="admin" placeholder="Contraseña"/>
+                                                <input class="form-control" id="clave" type="password" name="clave1" value="admin" placeholder="Contraseña"/>
                                                 <label for="clave">Contraseña</label>
                                             </div>
                                             
