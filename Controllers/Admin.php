@@ -22,8 +22,8 @@ class Admin extends Controller
             if (empty($data)) {
                 $respuesta = array('msg' => 'el correo no existe', 'icono' => 'warning'); 
             }else {
-                if (password_verify($_POST['clave'],$data['clave'])) {
-                    $_SESSION['email'] = $data['correo'];
+                if (password_verify($_POST['clave'],$data['usu_clave'])) {
+                    $_SESSION['email'] = $data['usu_correo'];
                     $respuesta = array('msg' => 'datos correctos', 'icono' => 'success'); 
                 } else {
                     $respuesta = array('msg' => 'contraseña incorrecta', 'icono' => 'warning'); 
@@ -36,4 +36,11 @@ class Admin extends Controller
             echo json_encode ($respuesta, JSON_UNESCAPED_UNICODE);
             die();
     }
+    public function home()
+    {
+        //print_r($_SESSION); un eco de prueba
+        $data['title'] = 'Panel Administrativo';       
+        $this->views->getView('admin/administracion', "index", $data);
+    }
+
 }

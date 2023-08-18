@@ -1,4 +1,4 @@
-<?php include_once 'views/template-principal/header.php'; ?>
+<?php include_once 'views/template/header-principal.php'; ?>
 
     <section class="bg-success py-5">
         <div class="container">
@@ -68,7 +68,7 @@
     <!-- End Section -->
 
 
-    <?php include_once 'views/template-principal/footer.php'; ?>
+    <?php include_once 'views/template/footer-principal.php'; ?>
 
 </body>
 

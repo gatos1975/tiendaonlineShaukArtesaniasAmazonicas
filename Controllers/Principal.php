@@ -32,15 +32,40 @@ class Principal extends Controller
     public function detail($pro_id)
     {
         $data['producto']=$this->model->getProducto($pro_id);
+        $cat_id = $data['producto']['pro_catid'];
+        $data['relacionados']=$this->model->getAleatorios($cat_id, $data['producto']['pro_id']);
         $data['title'] = $data['producto']['pro_nombre'];
         $this->views->getView('principal', "shop-single", $data);
     }
     
   //VISTA categorias
-  public function categorias($cat_id)
+  public function categorias($datos)
   {
-      $data['productos']=$this->model->getProductosCat($cat_id);
+    $cat_id=1;
+    $page=1;
+    $array=explode(',',$datos);
+    if (isset($array[0])){ 
+        if (!empty($array[0])) {
+            $cat_id=$array[0];
+        }
+    }
+    if (isset($array[1])){ 
+        if (!empty($array[1])) {
+            $page=$array[1];
+        }
+    }
+    
+        $pagina=(empty($page)) ? 1 : $page ;
+        $porPagina=2;
+        $desde=($pagina - 1) * $porPagina;
+        $data['pagina'] = $pagina;
+        $total=$this->model->getTotalProductosCat($cat_id);
+        $data['total']=ceil($total['total'] / $porPagina);
+
+
+      $data['productos']=$this->model->getProductosCat($cat_id, $desde,$porPagina);
       $data['title'] = 'Categorias';
+      $data['cat_id'] = $cat_id;
       $this->views->getView('principal', "categorias", $data);
   }
 

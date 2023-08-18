@@ -1,3 +1,4 @@
+ 
  <!-- Start Banner Hero -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">ADMINISTRACION</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">ADMINISTRACION1</h3></div>
                                     <div class="card-body">
                                         <form id="formulario">
                                             <div class="form-floating mb-3">
@@ -27,13 +28,15 @@
                                                 <label for="email">Correo Electrónico</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="clave" type="password" name="clave1" value="admin" placeholder="Contraseña"/>
+                                                <input class="form-control" id="clave" type="password" name="clave" value="admin" placeholder="Contraseña"/>
                                                 <label for="clave">Contraseña</label>
                                             </div>
                                             
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" href="password.html">Olvidaste tu contraseña?</a>
-                                                <a type="submit"  class="btn btn-primary">Acceso</a>
+                                                <button type="submit"  class="btn btn-primary">Acceso</button>
+                                                 <!-- Start Banner Hero 
+                                                <a type="submit"  class="btn btn-primary">Acceso</a>-->
                                             </div>
                                         </form>
                                     </div>

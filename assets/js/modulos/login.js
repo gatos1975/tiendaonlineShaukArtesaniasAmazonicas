@@ -15,11 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
       http.send(data);
       http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          console.log(this.responseText);
+          console.log(this.responseText); //esta instruccion entrega un mensaje detallado de un error
           const res = JSON.parse(this.responseText);
           if (res.icono == "success") {
             setTimeout(() => {
-              windows.location = base_url + "admin/home";
+              //aki ejecutamos la plantilla de administracion desde admin.php clase admin funcion home
+              window.location = base_url + "admin/home";
             }, 2000);
           }
           alertas(res.msg, res.icono);
@@ -30,6 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function alertas(msg, icono) {
-  alert("llene las cajas");
-  //swal.fire("aviso?", msg.toUpperCase(), "success");
+  //alert("llene las cajas");
+  swal.fire("aviso?", msg.toUpperCase(), "success");
 }

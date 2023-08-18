@@ -1,4 +1,4 @@
-<?php include_once 'views/template-principal/header.php'; ?>
+<?php include_once 'views/template/header-principal.php'; ?>
 
 
     <!-- Start Banner Hero -->
@@ -146,7 +146,7 @@
     <!-- End Featured Product -->
 
 
-    <?php include_once 'views/template-principal/footer.php'; ?>    
+    <?php include_once 'views/template/footer-principal.php'; ?>    
 </body>
 
 </html>
