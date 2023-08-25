@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-08-2023 a las 20:35:39
+-- Tiempo de generación: 25-08-2023 a las 05:41:37
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -140,6 +140,8 @@ CREATE TABLE `productos` (
   `pro_precio` float DEFAULT NULL,
   `pro_catid` int(11) DEFAULT NULL,
   `pro_imagen` varchar(150) NOT NULL,
+  `pro_imagen2` varchar(150) NOT NULL,
+  `pro_imagen3` varchar(150) NOT NULL,
   `pro_stock` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -147,12 +149,14 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`pro_id`, `pro_nombre`, `pro_descripcion`, `pro_precio`, `pro_catid`, `pro_imagen`, `pro_stock`) VALUES
-(1, 'collar de semillas de mujer', 'varios modelos y colores', 35, 1, '../assets/img/productos/collar3.jpg', 10),
-(2, 'Arete de mullos varios colores', 'diseños varios', 15, 3, './assets/img/productos/aretes1.jpg', 20),
-(3, 'Cintillos para mujer', 'Diseño en mullos', 25, 4, './assets/img/productos/cintillos.jpg', 50),
-(4, 'Pulsera de mullos', 'Diseños varios, para hombre o mujer.', 10.55, 2, './assets/img/productos/pulsera01.jpg', 22),
-(5, 'Collar de mullos', 'Varios estilos y colores', 31.3, 1, './assets/img/productos/collar04.jpg', 50);
+INSERT INTO `productos` (`pro_id`, `pro_nombre`, `pro_descripcion`, `pro_precio`, `pro_catid`, `pro_imagen`, `pro_imagen2`, `pro_imagen3`, `pro_stock`) VALUES
+(1, 'collar de semillas de mujer', 'varios modelos y colores', 35, 1, './assets/img/productos/collar3.jpg', '../../assets/img/productos/collar3.jpg', './../../assets/img/productos/collar3.jpg', 10),
+(2, 'Arete de mullos varios colores', 'diseños varios', 15, 3, './assets/img/productos/aretes1.jpg', '../../assets/img/productos/aretes1.jpg', './../../assets/img/productos/aretes1.jpg', 20),
+(3, 'Cintillos para mujer', 'Diseño en mullos', 25, 4, './assets/img/productos/cintillos.jpg', '../../assets/img/productos/cintillos.jpg', './../../assets/img/productos/cintillos.jpg', 50),
+(4, 'Pulsera de mullos', 'Diseños varios, para hombre o mujer.', 10.55, 2, './assets/img/productos/pulsera01.jpg', '../../assets/img/productos/pulsera01.jpg', './../../assets/img/productos/pulsera01.jpg', 22),
+(5, 'Collar de mullos', 'Varios estilos y colores', 31.3, 1, './assets/img/productos/collar4.jpg', '../../assets/img/productos/collar4.jpg', './../../assets/img/productos/collar4.jpg', 50),
+(6, 'Pulsera de semillas delgada', 'pepas de cumbía', 7, 2, './assets/img/productos/pulsera_pepas02.jpg', '../../assets/img/productos/pulsera_pepas02.jpg', './../../assets/img/productos/pulsera_pepas02.jpg', 15),
+(7, 'Pulsera de mullos color arcoiris', 'Tamaño una pulgada', 10, 2, './assets/img/productos/pulsera_arcoiris01.jpg', '../../assets/img/productos/pulsera_arcoiris01.jpg', './../../assets/img/productos/pulsera_arcoiris01.jpg', 20);
 
 -- --------------------------------------------------------
 
@@ -284,7 +288,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

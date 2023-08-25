@@ -41,6 +41,12 @@ class PrincipalModel extends Query{
         $sql="SELECT * FROM productos WHERE pro_catid=$cat_id AND pro_id != $pro_id ORDER BY RAND() LIMIT 10";
         return $this->selectall($sql);
     }
+    //obtener producto a partir de la lista de deseo
+    public function getListaDeseo($pro_id)
+    {
+        $sql="SELECT * FROM productos WHERE pro_id = $pro_id";
+        return $this->select($sql);
+    }
 }
  
 ?>

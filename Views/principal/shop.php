@@ -4,8 +4,6 @@
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
-
-        
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-md-6">
@@ -33,16 +31,16 @@
                 </div>
                 <div class="row">
                 <!--mostrar productos en shop -->   
-                <?php foreach($data['productos'] as $producto) { ?>
-                    <div class="col-md-4">
+                    <?php foreach($data['productos'] as $producto) { ?>
+                        <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
-                            <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="<?php echo $producto['pro_imagen'];?>">
+                            <!-- <div class="card rounded-0"> -->
+                                <img class="card-img rounded-0 img-fluid" src="<?php echo $producto['pro_imagen3'];?>">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white btnAddDeseo" href="#" prod="<?php echo $producto['pro_id'];?>"><i class="fas fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="<?php echo BASE_URL . 'principal/detail/' . $producto['pro_id'];?>"><i class="fas fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="#"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2 btnAddCarrito" href="#" prod="<?php echo $producto['pro_id'];?>"><i class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -61,7 +59,7 @@
                                 <p class="text-center mb-0"><?php echo MONEDA . ' ' . $producto['pro_precio'];?></p>
                             </div>
                         </div>
-                    </div>
+                        </div>
                     <?php } ?>
                 </div>
                 <div div="row">

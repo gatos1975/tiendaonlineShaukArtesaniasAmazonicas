@@ -1,3 +1,43 @@
+<div class="modal fade" id="myModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title"> <i class="fas fa-cart-arrow-down"></i>Carrito</h5>
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover"  id="tableListaCarrito">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">SubTotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td scope="row">R1C1</td>
+                                <td>R1C2</td>
+                                <td>R1C3</td>
+                                <td>R1C2</td>
+                                <td>R1C3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="modal-footer">
+                        <h3 id="totalGeneral"></h3>
+                    </div>
+                </div>
+                
+            </div>   
+        </div>
+    </div>    
+</div>
+ 
 <!-- Start Footer -->
 <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
@@ -100,5 +140,8 @@
     <script src="<?php echo BASE_URL;?>assets/js/templatemo.js"></script>
     <script src="<?php echo BASE_URL;?>assets/js/custom.js"></script>
     <script src="<?php echo BASE_URL;?>assets/js/sweetalert2.all.min.js"></script>
+    <script>
+        const base_url='<?php echo BASE_URL;?>';
+    </script>
     <script src="<?php echo BASE_URL;?>assets/js/carrito.js"></script>
     <!-- End Script -->
